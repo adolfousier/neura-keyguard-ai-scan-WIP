@@ -3,7 +3,7 @@
 
 ## Overview
 
-KeyGuard AI Scan is a comprehensive, open-source security tool that scans websites for exposed API keys and provides I-powered recommendations with any OpenAI compatible endpoint for remediation. Built with modern technologies and designed for both developers and security teams, it helps identify and fix API key exposures that could lead to security breaches.
+KeyGuard AI Scan is a comprehensive, open-source security tool that scans websites for exposed API keys and provides AI-powered recommendations with any OpenAI compatible endpoint, for remediation. Built with modern technologies and designed for both developers and security teams, it helps identify and fix API key exposures that could lead to security breaches.
 
 ## 🚀 Features
 
