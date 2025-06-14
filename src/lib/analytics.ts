@@ -1,3 +1,4 @@
+
 import { Langfuse } from "langfuse";
 
 interface AnalyticsEvent {
@@ -65,7 +66,7 @@ class AnalyticsService {
             sessionId: this.sessionId
           },
           input: properties,
-          timestamp: new Date()
+          startTime: new Date()
         });
       }
 
