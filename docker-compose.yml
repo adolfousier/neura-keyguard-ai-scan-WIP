@@ -1,0 +1,37 @@
+
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "11111:11111"
+    environment:
+      - VITE_API_URL=http://localhost:11112
+    depends_on:
+      - backend
+    networks:
+      - keyguard-network
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "11112:11112"
+    environment:
+      - JWT_SECRET=keyguard-production-secret-key-change-this
+      - NEURA_ROUTER_API_KEY=${NEURA_ROUTER_API_KEY:-demo-key}
+      - NEURA_ROUTER_API_URL=${NEURA_ROUTER_API_URL:-https://api.neura-router.com/v1}
+      - RUST_LOG=info
+    networks:
+      - keyguard-network
+
+networks:
+  keyguard-network:
+    driver: bridge
+
+volumes:
+  keyguard-data:

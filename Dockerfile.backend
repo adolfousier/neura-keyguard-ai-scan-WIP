@@ -1,0 +1,20 @@
+
+FROM rust:1.75-alpine AS builder
+
+RUN apk add --no-cache musl-dev
+
+WORKDIR /app
+COPY server/Cargo.toml server/Cargo.lock ./
+COPY server/src ./src
+
+RUN cargo build --release
+
+FROM alpine:latest
+RUN apk add --no-cache ca-certificates
+
+WORKDIR /app
+COPY --from=builder /app/target/release/keyguard-backend ./
+
+EXPOSE 11112
+
+CMD ["./keyguard-backend"]
