@@ -162,12 +162,14 @@ export const AIRecommendations = ({ findings, url }: AIRecommendationsProps) => 
                 ul: ({node, ...props}) => <ul className="list-disc list-inside mb-4 space-y-1" {...props} />,
                 ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-4 space-y-1" {...props} />,
                 li: ({node, ...props}) => <li className="text-gray-600" {...props} />,
-                code: ({node, inline, ...props}) => 
-                  inline ? (
-                    <code className="bg-gray-100 px-1 py-0.5 rounded text-sm font-mono" {...props} />
-                  ) : (
+                code: ({node, ...props}) => {
+                  const isCodeBlock = props.className?.includes('language-');
+                  return isCodeBlock ? (
                     <code className="block bg-gray-100 p-3 rounded-lg text-sm font-mono overflow-x-auto" {...props} />
-                  ),
+                  ) : (
+                    <code className="bg-gray-100 px-1 py-0.5 rounded text-sm font-mono" {...props} />
+                  );
+                },
                 blockquote: ({node, ...props}) => (
                   <blockquote className="border-l-4 border-blue-400 pl-4 py-2 bg-blue-50 rounded-r mb-4" {...props} />
                 ),

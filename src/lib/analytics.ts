@@ -1,3 +1,4 @@
+
 import { Langfuse } from "langfuse";
 
 interface AnalyticsEvent {
@@ -59,9 +60,11 @@ class AnalyticsService {
       if (this.langfuse) {
         this.langfuse.event({
           name: event,
-          userId: this.userId,
           sessionId: this.sessionId,
-          metadata: properties,
+          metadata: {
+            ...properties,
+            userId: this.userId
+          },
           input: properties,
           timestamp: new Date()
         });
