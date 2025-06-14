@@ -3,7 +3,7 @@
 
 ## Overview
 
-KeyGuard AI Scan is a comprehensive, open-source security tool that scans websites for exposed API keys and provides AI-powered recommendations for remediation. Built with modern technologies and designed for both developers and security teams, it helps identify and fix API key exposures that could lead to security breaches.
+KeyGuard AI Scan is a comprehensive, open-source security tool that scans websites for exposed API keys and provides I-powered recommendations with any OpenAI compatible endpoint for remediation. Built with modern technologies and designed for both developers and security teams, it helps identify and fix API key exposures that could lead to security breaches.
 
 ## 🚀 Features
 
@@ -15,7 +15,7 @@ KeyGuard AI Scan is a comprehensive, open-source security tool that scans websit
 - **Context-Aware Detection**: Distinguishes between real keys and test/dummy values
 
 ### 🤖 AI-Powered Intelligence
-- **Smart Recommendations**: NEURA_ROUTER integration for context-aware suggestions
+- **Smart Recommendations**: NEURA_ROUTER or any OpenAI SDK compatible integration for context-aware suggestions
 - **Severity Classification**: Automatic risk assessment (Critical, High, Medium, Low)
 - **Actionable Remediation**: Detailed, step-by-step fix instructions
 - **Best Practices**: Security guidelines and prevention tips
@@ -50,7 +50,7 @@ KeyGuard AI Scan is a comprehensive, open-source security tool that scans websit
 - **Database**: LibSQL for lightweight, fast data storage
 - **Web Framework**: Axum for async HTTP services
 - **Authentication**: JWT with bcrypt password hashing
-- **AI Integration**: NEURA_ROUTER (OpenAI-compatible)
+- **AI Integration**: NEURA_ROUTER (OpenAI SDK compatible)
 - **HTTP Client**: Reqwest for web scraping
 
 ### Infrastructure
