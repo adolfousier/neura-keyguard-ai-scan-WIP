@@ -279,7 +279,7 @@ docker-compose -f docker-compose.prod.yml up -d
 - **Issues**: GitHub Issues for bug reports
 - **Discussions**: Feature requests and questions
 - **Discord**: Real-time community support
-- **Security**: security@keyguard.dev for vulnerabilities
+- **Security**: adolfo@meetneura.ai for vulnerabilities
 
 ## 📜 License
 
